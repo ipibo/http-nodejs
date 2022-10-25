@@ -15,3 +15,12 @@ wss.on('connection', function connection(ws) {
   ws.send('something');
 });
 
+
+wss.broadcast = function broadcast(msg) {
+    console.log(msg);
+    wss.clients.forEach(function each(client) {
+        client.send(msg);
+    });
+};
+
+
