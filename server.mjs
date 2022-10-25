@@ -3,7 +3,7 @@ import { WebSocketServer } from 'ws';
 
 console.log(process.env.PORT )
 
-const PORT = process.env.port || 1122
+const PORT = process.env.PORT || 1122
 
 console.log(PORT)
 
