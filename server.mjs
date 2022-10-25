@@ -8,6 +8,7 @@ console.log('server started')
 wss.on('connection', function connection(ws) {
   ws.on('message', function message(data) {
     console.log('received: %s', data);
+    ws.send(`I received the data ${data} from you`)
   });
 
   ws.send('something');
